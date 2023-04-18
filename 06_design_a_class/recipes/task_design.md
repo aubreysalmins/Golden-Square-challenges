@@ -23,9 +23,6 @@ class TaskTracker
 end
 
 3. Create Examples as Tests
-Make a list of examples of how the class will behave in different situations.
-
-# EXAMPLE
 
 # 1
 todo_tracker = TaskTracker.new
