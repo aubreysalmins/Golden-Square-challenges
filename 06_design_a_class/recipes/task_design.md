@@ -4,21 +4,26 @@ As a user
 So that I can keep track of my tasks
 I want a program that I can add todo tasks to and see a list of them.
 
+As a user
+So that I can focus on tasks to complete
+I want to mark tasks as complete and have them disappear from the list.
+
 2. Design the Class Interface
 
 class TaskTracker
   def initialize
-    
   end
 
   def add_task(task) # task is a string
-    # Throws an exception if no task is given
     # Returns nothing
   end
 
   def show_list
-    # Throws an exception if no task is set
-    # Otherwise, returns a list of tasks as an array
+    # Returns a list of tasks as an array
+  end
+
+  def mark_as_complete(task) # task is a string
+    # Removes the given task from the list
   end
 end
 
@@ -34,13 +39,11 @@ Unwalk the dog
 
 # 2
 todo_tracker = TaskTracker.new
-todo_tracker.add_task("")
-=> Not a valid string
-
-# 3
-todo_tracker = TaskTracker.new
+todo_tracker.add_task("Walk the dog")
+todo_tracker.add_task("Unwalk the dog")
+todo_tracker.mark_as_complete("Walk the dog")
 todo_tracker.show_list
-=> You haven't given a todo yet!
+=> Unwalk the dog
 
 4. Implement the Behaviour
 After each test you write, follow the test-driving process of red, green, refactor to implement the behaviour.
