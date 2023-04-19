@@ -31,19 +31,23 @@ end
 
 # 1
 todo_tracker = TaskTracker.new
-todo_tracker.add_task("Walk the dog")
-todo_tracker.add_task("Unwalk the dog")
-todo_tracker.show_list 
-=> Walk the dog
-Unwalk the dog
+todo_tracker.add_task
+=> []
 
 # 2
 todo_tracker = TaskTracker.new
 todo_tracker.add_task("Walk the dog")
 todo_tracker.add_task("Unwalk the dog")
+todo_tracker.show_list 
+=> ["Walk the dog" "Unwalk the dog"]
+
+# 3
+todo_tracker = TaskTracker.new
+todo_tracker.add_task("Walk the dog")
+todo_tracker.add_task("Unwalk the dog")
 todo_tracker.mark_as_complete("Walk the dog")
 todo_tracker.show_list
-=> Unwalk the dog
+=> ["Unwalk the dog"]
 
 4. Implement the Behaviour
 After each test you write, follow the test-driving process of red, green, refactor to implement the behaviour.
