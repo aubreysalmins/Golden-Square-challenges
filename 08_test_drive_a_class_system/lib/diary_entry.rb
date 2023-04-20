@@ -17,8 +17,9 @@ class DiaryEntry
     return @contents.count(" ") +1
   end
 
-  def reading_time(wpm) # wpm is an integer representing
-                        # the number of words the user can read per minute
+  def reading_time(wpm)
+    fail "WPM must be positive" unless wpm.positive?
+    return (count_words / wpm.to_f).round
     # Returns an integer representing an estimate of the reading time in minutes
     # for the contents at the given wpm.
   end
