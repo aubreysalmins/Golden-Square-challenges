@@ -7,6 +7,4 @@ RSpec.describe TodoList do
       expect(todo_list.incomplete).to eq []
     end 
   end
-
-  
 end

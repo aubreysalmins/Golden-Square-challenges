@@ -41,6 +41,16 @@ RSpec.describe "integration" do
     expect(todo_list.complete).to eq [todo, todo1]
   end
 
-  
+  describe "#give_up! method" do
+    it "marks all tasks as complete" do
+      todo_list = TodoList.new
+      todo = Todo.new("Walk dog")
+      todo_list.add(todo)
+      todo1 = Todo.new("Wash car")
+      todo_list.add(todo1)
+      todo_list.give_up!
+      expect(todo_list.complete).to eq [todo, todo1]
+    end
+  end
 end
 

@@ -31,5 +31,6 @@ class TodoList
 
   def give_up!
     # Marks all todos as complete
+    @todos.each { |todo| todo.mark_done! }
   end
 end
