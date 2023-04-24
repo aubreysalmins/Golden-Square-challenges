@@ -11,7 +11,7 @@ RSpec.describe "integration" do
     expect(music_library.all).to eq [track_1, track_2]
   end
 
-  xit "searches tracks by title" do
+  it "searches tracks by title" do
     music_library = MusicLibrary.new
     track_1 = Track.new("one two three", "four five six")
     track_2 = Track.new("seven eight nine", "ten eleven twelve")
