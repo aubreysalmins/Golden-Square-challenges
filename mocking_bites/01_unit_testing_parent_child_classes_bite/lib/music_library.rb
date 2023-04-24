@@ -5,7 +5,7 @@ class MusicLibrary
   end
 
   def add(track)
-    @track << track
+    @tracks << track
   end
 
   def all
